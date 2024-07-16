@@ -68,9 +68,9 @@ return {
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
-
+	
     -- configure clangd
-	lspconfig["clangd"].setup({})
+	-- lspconfig["clangd"].setup({})
 
     -- configure lua server (with special settings)
     -- lspconfig["lua_ls"].setup({
@@ -92,6 +92,28 @@ return {
     --     },
     --   },
     -- })
-  end,
+	
+	-- configure pyright
+	lspconfig.pyright.setup({
+		on_attach = on_attach,
+		settings = {
+			pyright = {
+				autoImportCompletion = true,
+			},
+			python = {
+				analysis = {
+					autoSearchPaths = true,
+					diagnosticMode = 'openFilesOnly',
+					useLibraryCodeForTypes = true,
+					typeCheckingMode = 'off'
+				}
+			}
+		}
+	})
+
+	-- configure typescript-language-server
+	-- lspconfig
+	print(lspconfig)
+end,
 }
 

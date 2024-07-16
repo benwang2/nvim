@@ -11,6 +11,12 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smarttab = true
 
-
+-- vim.filetype.add {
+--  extension = {
+--    lua = function(path)
+--      return path:match ".nvim.lua$" and "lua" or "luau"
+--    end,
+--  },
+--}
 
 require("ben.lazy")
