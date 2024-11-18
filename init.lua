@@ -11,6 +11,11 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smarttab = true
 
+vim.opt.conceallevel = 2
+
+vim.g.mouse = nil
+vim.g.mapleader = ' '
+
 -- vim.filetype.add {
 --  extension = {
 --    lua = function(path)
@@ -18,5 +23,8 @@ vim.opt.smarttab = true
 --    end,
 --  },
 --}
+
+-- dfs on vim.opt
+
 
 require("ben.lazy")

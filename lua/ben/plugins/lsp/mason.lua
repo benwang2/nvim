@@ -9,9 +9,11 @@ return {
 			require("mason").setup()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"clangd",
-					"luau_lsp",
+--					"clangd",
+--					"luau_lsp",
 --					"stylua",
+					"pyright",
+					"html"
 				},
 				automatic_installation = true
 			})
