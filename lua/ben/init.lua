@@ -26,10 +26,5 @@ vim.g.mapleader = ' '
 
 -- dfs on vim.opt
 
-if vim.g.neovide then
-	vim.g.neovide_cursor_animation_length = 0.05
-end
-
 
 require("ben.lazy")
-require("ben.autocmds")
